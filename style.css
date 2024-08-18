@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 95vw;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.date-picker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.array-section {
+    margin: 20px 0;
+    width: 100%;
+    flex-basis: 20%;
+}
+
+.date-section {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.styled-input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.styled-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: #45a049;
+}
+
+.styled-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .array-section {
+        flex-basis: 50%;
+    }
+    .styled-table {
+        width: 95%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 767px)  {
+    h1 {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    .array-section {
+        flex-basis: 50%;
+    }
+    .styled-table {
+        width: 95%;
+    }
+    .styled-button {
+        font-size: 12px;
+        line-height: 1.6;
+        padding: 6px 10px;
+    }
+}
