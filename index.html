@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Picker with Array Calculation</title>
+    <title>Date Calculation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,28 @@
             <!-- Date pickers and buttons for cumulative calculations -->
         </div>
     </div>
+
+    <script type="text/javascript">
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+
+        document.onkeydown = (e) => {
+          // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+          )
+            return false;
+        };
+    </script>
+    
     <script src="script.js"></script> <!-- script file for regular date calculation functionality -->
     <script src="cumulativeDatePicker.js"></script> <!-- script file for cumulative functionality -->
 </body>
